@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Organize your task</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="main-bar">
+      <div class="search-bar">
+        <input type="search" placeholder="Search Tasks" id="">
+        <a class="btn-primary" href="#" onclick="ShowModal()">+ Add Task</a>
+      </div>
+      <div class="welcome-text">
+        <h4>Good Morming!</h4>
+        <p>Stay productive. you've got this!</p>
+      </div>
+
+      <div class="main-bar-cards">
+        <div class="card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+              <path 
+                fill="#6366f1" 
+                stroke="#6366f1" 
+                stroke-width="1"
+                d="m20.41 8.41l-4.83-4.83c-.37-.37-.88-.58-1.41-.58H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9.83c0-.53-.21-1.04-.59-1.42M7 7h7v2H7zm10 10H7v-2h10zm0-4H7v-2h10z"
+              />
+            </svg>
+            <p>Total Tasks</p>
+          </div>
+          <p id="total-task">0</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+              <path 
+                fill="#10b981" 
+                stroke="#10b981" 
+                stroke-width="1"
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m3.88-11.71L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0"
+                />
+              </svg>
+            <p>Completed</p>
+          </div>
+          <p id="total-completed">0</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+              <path fill="#f59e08" 
+                stroke="#f59e08" 
+                stroke-width="1" 
+                d="m22 5.72l-4.6-3.86l-1.29 1.53l4.6 3.86zM7.88 3.39L6.6 1.86L2 5.71l1.29 1.53zM12.5 8H11v6l4.75 2.85l.75-1.23l-4-2.37zM12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9a9 9 0 0 0 0-18m0 16c-3.87 0-7-3.13-7-7s3.13-7 7-7s7 3.13 7 7s-3.13 7-7 7"
+              />
+            </svg>
+            <p>Pending</p>
+          </div>
+          <p id="total-pending">0</p>
+        </div>
+
+        <div class="card progress">
+          <div class="progress-card">
+            <div>
+              <!-- <p >50%</p> -->
+            </div>
+          </div>
+          <div>
+            <p>Progress</p>
+            <strong id="percentage">0%</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-bar">
+        <div class="task-bar">
+          <h4>All Tasks</h4>
+          <div class="task-table">
+            <ul id="task-list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-modal">
+      <form>
+        <label for="title">Title:</label>
+        <input type="text" id="title" placeholder="Task Title">
+        <label for="description">Description:</label>
+        <input type="text" id="description" placeholder="Task Description">
+        <label for="due-date">Due Date:</label>
+        <input type="date" id="date">
+        <div class="btn-group">
+          <button class="btn-primary" onclick="addTask()">Add Task</button>
+          <button class="btn-secondary" onclick="CloseModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
