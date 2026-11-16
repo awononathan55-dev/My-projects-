@@ -1,0 +1,583 @@
+@font-face {
+  font-family: 'Ms Madi';
+  src: url(/fonts/Ms_Madi/MsMadi-Regular.ttf) format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'poppins';
+  src: url("/fonts/Inter,Poppins/Poppins/Poppins-Light.ttf") format(truetype);
+}
+@font-face {
+  font-family: 'inter';
+  src: url("/fonts/Inter,Poppins/Inter/static/Inter_18pt-Light.ttf") format(truetype);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --primary-color: #DFA83D;
+  --background-color: #f8f6f1ce;
+  --dark-sections: #00000052;
+  --body-text: 'Inter';
+  --header-text: 'Ms Madi';
+  --primary: #ffffff;
+  --secondary-color: transparent;
+  --bg-color: #000000;
+  --text-primary: #1c1b24;
+  --text-muted: #e94b5a;
+  --color-success: #10b981;
+  --color-warning: #ff9b54;
+}
+html{
+  scroll-behavior: smooth;
+}
+html a{
+  text-decoration: none;
+  font-size: 0.85em;
+  color: #1c1b24;
+}
+section{
+  height: 80vh;
+  width: 100%;
+  font-family: var(--body-text);
+}
+header nav{
+  font-family: var(--body-text);
+  position: absolute;
+  width: 100%;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary);
+  z-index: 1;
+}
+.nav-icon{
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  gap: 10px;
+} 
+.icon-title{
+  line-height: 13px;
+  padding: 10px;
+}
+.icon-title p{
+  font-family: var(--header-text);
+  font-size: 1.5em;
+}
+.icon-title small{
+  color: var(--primary-color);
+  font-size: 0.6em;
+}
+.close{
+  padding: 5px;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 150px;
+  border: 1px solid ;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.close:hover{
+  background-color: var(--text-muted);
+  border: 1px solid var(--text-muted);
+  cursor: pointer;
+}
+.nav-link ul{
+  display: flex;
+}
+.nav-link ul li{
+  list-style: none;
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 1.02em;
+  cursor: pointer;
+}
+.nav-link ul li a{
+  text-decoration: none;
+  color: var(--primary);
+}
+.nav-link ul li a:hover{
+  transition: .3s ease-in;
+  color: var(--primary-color);
+  display: inline-block;
+  border-bottom: 2px solid var(--primary-color);
+  /* border-bottom-width: ; */
+  border-bottom-style: solid;
+}
+.nav-btn{
+  padding: 12px;
+}
+/* .menu-burger{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 100%;
+}
+.burger-container .menu-bar{
+  height: 32px;
+  border: 1px solid black;
+} */
+#home{
+  background-image: url('../image/The Beginner’s Guide to Elegant Dinner Party___.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(0.5rem);
+}
+.dark-bg{
+  background-color: var(--dark-sections);
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 100px;
+  backdrop-filter: blur(0.2rem);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.home-section{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+.home-section small{
+  color: var(--primary-color);
+  font-size: 0.6rem;
+  font-weight: 900;
+}
+.home-section h3{
+  font-family: var(--header-text);
+  color: var(--primary);
+  font-size: 5.3rem;
+  line-height: 1;
+  text-align: start;
+  line-break: 2;
+}
+.home-section h3 span{
+  color: var(--primary-color);
+}
+.home-section p{
+  color: var(--background-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-break: 1;
+}
+.home-btn{
+  margin: 2em 0 0 0;
+  display: flex;
+  gap: 20px;
+}
+.btn-primary{
+  padding: .8em 1em;
+  border: 0px solid var(--primary-color);
+  border-radius: 17px;
+  background-color: var(--primary-color);
+  font-weight: 500;
+  font-family: var(--body-text);
+  cursor: pointer;
+}
+.btn-primary:hover{
+  background-color: #b47904;
+  transition: .3s ease-in-out;
+  transform: translateY(-1px);
+}
+.btn-secondary{
+  padding: .8em 1em;
+  border: 1px solid var(--primary-color);
+  border-radius: 17px;
+  background-color: transparent;
+  font-weight: 500;
+  color: var(--primary-color);
+  font-family: var(--body-text);
+  cursor: pointer;
+}
+.btn-secondary:hover{
+  background-color: #dfa93d;
+  transition: .3s ease-in-out;
+  color: #1c1b24;
+  transform: translateY(-1px);
+}
+
+#menu{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 320px 1fr;
+  padding: 0 100px;
+  background-color: var(--background-color);
+}
+.menu-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 2.5em 0 0;
+}
+.menu-text-small{
+  color: var(--primary-color);
+  font-size: 0.6em;
+  font-weight: 900;
+}
+.menu-text h3{
+  font-family: var(--header-text);
+  font-size: 3.5em;
+  line-height: 1;
+}
+.menu-text p{
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-break: 1;
+}
+.menu-text .btn-primary{
+  width: fit-content;
+  margin: 1em 0;
+}
+.menu-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: fit-content;
+  gap: 10px;
+}
+.menu-card .card{
+  padding: 1px;
+  /* margin: 0 10px 0 0; */
+  border-radius: 17px;
+  height: 250px;
+  background-color: #ffffff;
+  /* box-shadow: 0px 1px 10px var(--dark-sections) */
+}
+.card .card-img{
+  /* background-image: url('../image/pexels-larysa-stratiichuk-1606923648-38485702.jpg'); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  width: 100%;
+  height: 50%;
+}
+.card:hover{
+  box-shadow: 1px 1px 20px rgba(223, 169, 61, 0.2);
+  transform: scale(1.015);
+  transition: .3s ease-in-out;
+}
+.card-img.one{
+  background-image: url('../image/BBQ Grilled Chicken Recipe.jpg');
+}
+.card-img.two{
+  background-image: url('../image/Oven-Grilled Fish in Homemade Barbecue Sauce💕🤗.jpg');
+}
+.card-img.three{
+  background-image: url('../image/Spicy Garlic Chili Noodles, Better Than Takeout in Just 20 Minutes.jpg');
+}
+.card-img.four{
+  background-image: url('../image/Grilled Chicken Caesar Salad.jpg');
+}
+
+.card h4{
+  font-size: 0.9em;
+  padding: 10px 10px 0 10px;
+  text-transform: capitalize;
+}
+.card p{
+  font-size: 0.75em;
+  padding: 10px 10px 10px 10px;
+}
+.card span{
+  font-weight: 800;
+  padding: 20px;
+  font-size: 0.9em;
+}
+/* .card-img img{
+  width: 100%;
+  height: 100%;
+} */
+#about{
+  background-image: url('../image/download.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-dark{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 100px;
+  backdrop-filter: blur(0.2em);
+  background-color: #00000052;
+}
+.about-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-text-small{
+  color: var(--primary-color);
+  font-size: 0.6em;
+  font-weight: 900;
+}
+.about-text h3{
+  font-family: var(--header-text);
+  color: var(--primary);
+  font-size: 4em;
+  line-height: 1;
+}
+.about-text p{
+  color: var(--background-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-break: 1;
+}
+.about-text .btn-secondary{
+  width: fit-content;
+}
+#contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section{
+  display: grid;
+  grid-template-columns: 300px 300px;
+  height: 400px;
+  gap: 10px;
+  background-color: #f5f0e8;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.contact-section .contact-img{
+  background-image: url('../image/Experiencia del cliente.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 7px;
+  transition: .3s ease-in;
+}
+.contact-img .dark{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: none;
+  border-radius: 13px;
+  justify-content: start;
+  align-items: center;
+  background-color: #0000009f;
+  backdrop-filter: blur(2px);
+  transition: .3s ease-in;
+}
+.contact-img .dark .text{
+  color: #f5f0e8c8;
+  font-size: 0.85em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: .3s ease-in;
+}
+.contact-img .dark .text h3{
+  font-family: var(--header-text);
+  font-size: 3em;
+  color: var(--primary-color);
+  line-height: 1;
+}
+.contact-form{
+  align-self: center;
+}
+.contact-form .form-group{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label{
+  font-weight: 500;
+  font-size: 0.8em;
+  padding: 5px 0;
+}
+.form-group input{
+  padding: 0.5em;
+  border-radius: 17px;
+  border: 1px solid;
+  outline: none;
+}
+.form-group input:focus{
+  outline-color: var(--primary-color);
+}
+.form-group textarea{
+  border-radius: 17px;
+  padding: 10px;
+  outline: none;
+}
+.form-row{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.form-btn .btn-primary{
+  width: 100%;
+  margin: 15px 0;
+}
+footer{
+  padding: 20px 100px;
+  background-color: var(--text-primary);
+  height: 127px;
+  font-family: var(--body-text);
+  color: var(--background-color);
+}
+.footer-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+.footer-link p , .footer-contact p, .footer-follow{
+  font-weight: 700;
+  font-size: 0.8em;
+}
+.footer-contact ul li,.footer-link ul li{
+  list-style: none;
+  font-size: 0.7em;
+  padding:2px;
+}
+.footer-link ul li a{
+  text-decoration: none;
+  color: var(--background-color);
+}
+.menu-burger .menu-container{
+  transform: rotate(90deg);
+  padding: 12px;
+  display: none;
+  z-index: 1;
+  position: absolute;
+  border-radius: 50px;
+  left: 30px;
+  top: 30px;
+}
+.menu-burger .menu-container:hover{
+  background-color: #1c1b2490;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+.menu-burger .menu-container span{
+  height: 20px;
+  border: 1.5px solid #f5f0e8;
+  margin: 2px;
+  border-radius: 50px;
+}
+@media (max-width:769px) {
+  .menu-burger .menu-container{
+    display: flex;
+  }
+  header nav{
+    display: none;
+    grid-template-rows: 50px 1fr 1fr;
+    position: absolute;
+    flex-direction: column;
+    background-color: #1c1b24;
+    gap: 10px;
+    left: 0;
+    padding: 10px;
+    height: 100%;
+    width: 250px;
+    transition: .3s ease-in;
+  }
+  .close{
+    display: flex;
+  }
+  .nav-link, .nav-icon, .nav-btn{
+    width: 200px;
+  }
+  .nav-link ul{
+    flex-direction: column;
+    font-size: 1.1em;
+  }
+  .nav-link ul li{
+   padding: 10px;
+  }
+  .dark-bg, .home-section{
+    padding: 15px;
+    width: 100%;
+  }
+  #menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  .menu-card{
+    gap: 3px;
+  }
+  .bg-dark{
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+  .contact-section{
+    grid-template-columns: 1fr;
+  }
+  .contact-img{
+    display: none;
+  }
+  footer{
+    padding: 20px;
+  }
+}
+
+@media (max-width: 649px) {
+  html{
+    font-size: 0.8em;
+  }
+  section{
+    height: 90vh;
+  }
+  .contact-section{
+    grid-template-columns: 300px;
+    height: fit-content;
+  }
+  .menu-card{
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .card .card-img{
+    height: 70%;
+  }
+  .menu-card .card{
+    width: 100%;
+    height: 100%;
+  }
+  .menu-card .card h4, .menu-card .card span{
+    display: none;
+  }
+}
+
+@media (max-width: 321px){
+  .contact-section{
+    grid-template-columns: 250px;
+    height: fit-content;
+  }
+  .menu-card .card p{
+    display: none;
+  }
+  .card .card-img{
+    height: 100%;
+    border-radius: 12px;
+  }
+  .home-section h3{
+    font-size: 4rem;
+  }
+  .menu-burger .menu-container{
+    display: flex;
+    margin: -10px;
+  }
+}

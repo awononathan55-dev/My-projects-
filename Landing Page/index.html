@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Bon Gout - Restaurant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <nav id="nav-bar">
+      <div class="nav-icon">
+        <!-- <div class="icon-img">
+          <img src="" alt="">
+        </div> -->
+        <div class="icon-title">
+          <p>Le Bon Gout</p>
+          <small>Restaurant</small>
+        </div>
+        <div class="close">X</div>
+      </div>
+
+      <div class="nav-link">
+        <ul>
+          <li><a onclick="CloseNav()" href="#home">Home</a></li>
+          <li><a onclick="CloseNav()" href="#menu">Menu</a></li>
+          <li><a onclick="CloseNav()" href="#about">About Us</a></li>
+          <li><a onclick="CloseNav()" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-btn">
+        <a href="#contact" class="btn-primary">Reserve a sit</a>
+      </div>
+      
+    </nav>
+    <div class="menu-burger">
+      <div class="menu-container">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section id="home">
+    <div class="dark-bg">
+      <div class="home-section">
+        <small>DELICIOUS COOKING <span>-</span> UNIQUE AMBIANCE</small>
+        <h3>An unforgetable <span>culinary experience</span></h3>
+        <p>Discover delicious meals, cooked with fresh and local ingredients,<br> in a jovial environment</p>
+        <div class="home-btn">
+          <a href="#menu" class="btn-primary">Your Menu</a>
+          <a href="#contact" class="btn-secondary">Reserve a table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">  
+    <div class="menu-text">
+      <div class="menu-text-small">
+        <span>________</span>
+        <span>OUR MENU</span>
+      </div>
+      <h3>A card rich in savor</h3>
+      <p>from traditional to original creations, our menu proposes a large variety of meals to satisfy all your desires.</p>
+      <a href="#" class="btn-primary">Discover all our menu</a>
+    </div>
+
+    <div class="menu-card">
+      <div class="card">
+        <div class="card-img one">
+          <!-- <img src="./image/pexels-larysa-stratiichuk-1606923648-38485702.jpg" alt=""> -->
+        </div>
+        <h4>roasted chicken</h4>
+        <p>soft chicken roasted on fire accompanied with plantain</p>
+        <span>10$</span>
+      </div>
+
+      <div class="card">
+        <div class="card-img two">
+          <!-- <img src="./image/pexels-larysa-stratiichuk-1606923648-38485702.jpg" alt=""> -->
+        </div>
+        <h4>roasted fish</h4>
+        <p>fresh fish roasted on fire accompanied with plantain</p>
+        <span>13$</span>
+      </div>
+
+      <div class="card">
+        <div class="card-img three">
+          <!-- <img src="./image/pexels-larysa-stratiichuk-1606923648-38485702.jpg" alt=""> -->
+        </div>
+        <h4>Pasta & sea fruits</h4>
+        <p>a perfect mixture of marine savors and cream</p>
+        <span>11$</small>
+      </div>
+
+      <div class="card">
+        <div class="card-img four">
+          <!-- <img src="./image/pexels-larysa-stratiichuk-1606923648-38485702.jpg" alt=""> -->
+        </div>
+        <h4>fresh salad</h4>
+        <p>fresh vegetables, avocado, chicken and fresh spicing</p>
+        <span>10$</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="bg-dark">
+      <div class="about-text">
+        <div class="about-text-small">
+          <span>________</span>
+          <span>ABOUT US</span>
+        </div>
+        <h3>Le Bon Gout, more than a restaurant</h3>
+        <p>since 2018, Le Bon Gout welcomes you in an honorable manner to make you discover their authentic cooking.Our passion is to offer meals that leave you without words.Cooked with fresh and local ingredients accompanied by an attentionate service.</p>
+        <a href="#about" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-section">
+      <div id="contact-img" class="contact-img">
+        <div id="dark" class="dark">
+          <div class="text">
+            <h3>Fill the <br> form Beside</h3>
+            <p>For any reservation, information or enquiry.</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form>
+          <div class="form-group">
+            <label for="full-name">Full name</label>
+            <input type="text" placeholder="enter your full name" id="full-name" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" placeholder="enter your email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" placeholder="enter the subject" id="subject" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea placeholder="enter your message" id="message" cols="4" rows="4" required></textarea>
+          </div>
+          <div class="form-btn">
+            <button class="btn-primary">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-section">
+      <div class="footer-icon">
+        <!-- <div class="icon-img">
+          <img src="" alt="">
+        </div> -->
+        <div class="icon-title">
+          <p>Le Bon Gout</p>
+          <small>Restaurant</small>
+        </div>
+      </div>
+
+      <div class="footer-link">
+        <p>Rapid links</p>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <p>Contact</p>
+        <ul>
+          <li>Yaounde,Cameroon</li>
+          <li>+237652582153</li>
+          <li>contact@gmail.com</li>
+        </ul>
+      </div>
+      <div class="footer-follow">
+        <p>Follow Us</p>
+      </div>
+      <!-- <br><hr>
+      copyright__2026 -->
+    </div>
+  </footer>
+  <script src="./js/app.js"></script>
+</body>
+</html>
